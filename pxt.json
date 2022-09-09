@@ -4,10 +4,10 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "neopixel": "github:microsoft/pxt-neopixel"
     },
     "files": [
-        "main.ts",
         "README.md",
         "piano.ts"
     ],
