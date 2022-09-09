@@ -20,15 +20,14 @@ enum TP_PIANO {
 
     C1 = 0x1000,
 }
-
 /**
  * RGBLED order.
  */
 enum RGB_LED {
-    RGB_L1 = 0,
-    RGB_L2 = 1,
-    RGB_L3 = 2,
-    RGB_L4 = 3,
+    LED_1 = 0,
+    LED_2 = 1,
+    LED_3 = 2,
+    LED_4 = 3,
 }
 
 /**
@@ -60,8 +59,9 @@ enum RGB_COLOR {
  */
 //% weight=20 color=#3333FF icon="\uf001"
 namespace Piano {
+    let strip = neopixel.create(DigitalPin.P1, 4, NeoPixelMode.RGB);
     //% blockId=tp_press 
-    //% block="Pey|%index|is pressed"
+    //% block="Key|%index|is pressed"
     //% weight=100
     export function TP_Press(index: TP_PIANO): boolean {
         let TPval = pins.i2cReadNumber(0x57, NumberFormat.UInt16BE);
@@ -134,9 +134,6 @@ namespace Piano {
     //% LED3.min=0 LED3.max=65535
     //% LED4.min=0 LED4.max=65535
     export function TP_ShowRGB(LED1: number, LED2: number, LED3: number, LED4: number): void {
-        let rgb_id = 0;
-        let strip = neopixel.create(DigitalPin.P1, 4, NeoPixelMode.RGB);
-        strip.setBrightness(20);
         strip.setPixelColor(0, LED1);
         strip.setPixelColor(1, LED2);
         strip.setPixelColor(2, LED3);
@@ -144,6 +141,19 @@ namespace Piano {
         strip.show();
     }
 
+    /**
+     * Display 4 RGB color.
+     * @param COLOR [0-65535] LED1 color; eg: 10000, 65535
+    */
+    //% blockId=TP_ShowRGB_single 
+    //% block="Set RGB LED Color |LED: %0 |COLOR %10000"
+    //% weight=80
+    //% COLOR.min=0
+    export function TP_ShowRGB_single(RGB_LED: number, COLOR:number): void {
+        strip.setBrightness(80);
+        strip.setPixelColor(RGB_LED, COLOR);
+        strip.show();
+    }
 
     /**
      * Plays a tone through pin ``P0`` for the given duration.
