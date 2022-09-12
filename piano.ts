@@ -146,7 +146,7 @@ namespace Piano {
      *
     */
     //% blockId=TP_Off_single
-    //% block="Set RGB LED Color |%RGB_LED"
+    //% block="Turn off RGB LED |%RGB_LED"
     //% weight=80
     //% COLOR.min=0
     export function TP_Off_single(RGB_LED: RGB_LED): void {
