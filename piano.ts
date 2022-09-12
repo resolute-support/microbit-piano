@@ -146,10 +146,10 @@ namespace Piano {
      * @param COLOR [0-65535] LED1 color; eg: 10000, 65535
     */
     //% blockId=TP_ShowRGB_single 
-    //% block="Set RGB LED Color |RGB_LED %|COLOR %10000"
+    //% block="Set RGB LED Color |%RGB_LED|COLOR %10000"
     //% weight=80
     //% COLOR.min=0
-    export function TP_ShowRGB_single(RGB_LED: number, COLOR:number): void {
+    export function TP_ShowRGB_single(RGB_LED: RGB_LED, COLOR:number): void {
         strip.setBrightness(80);
         strip.setPixelColor(RGB_LED, COLOR);
         strip.show();
