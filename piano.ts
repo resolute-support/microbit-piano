@@ -119,21 +119,7 @@ namespace Piano {
         return TP_SetRGB(R, G, B);
     }
 
-    /**
-     * Display 4 RGB color.
-     * @param LED1 [0-65535] LED1 color; eg: 10000, 65535
-     * @param LED2 [0-65535] LED2 color; eg: 20000, 65535
-     * @param LED3 [0-65535] LED3 color; eg: 30000, 65535
-     * @param LED4 [0-65535] LED4 color; eg: 40000, 65535
-    */
-    //% blockId=TP_ShowRGB 
-    //% block="Set RGB LED Color |LED1: %Color1|LED2: %Color2|LED3: %Color3|LED4: %Color4"
-    //% weight=80
-    //% LED1.min=0 LED1.max=65535
-    //% LED2.min=0 LED2.max=65535
-    //% LED3.min=0 LED3.max=65535
-    //% LED4.min=0 LED4.max=65535
-    export function TP_ShowRGB(LED1: number, LED2: number, LED3: number, LED4: number): void {
+    function TP_ShowRGB(LED1: number, LED2: number, LED3: number, LED4: number): void {
         strip.setPixelColor(0, LED1);
         strip.setPixelColor(1, LED2);
         strip.setPixelColor(2, LED3);
@@ -145,13 +131,27 @@ namespace Piano {
      * Display 4 RGB color.
      * @param COLOR [0-65535] LED1 color; eg: 10000, 65535
     */
-    //% blockId=TP_ShowRGB_single 
+    //% blockId=TP_ShowRGB_single
     //% block="Set RGB LED Color |%RGB_LED|COLOR %10000"
     //% weight=80
     //% COLOR.min=0
     export function TP_ShowRGB_single(RGB_LED: RGB_LED, COLOR:number): void {
         strip.setBrightness(80);
         strip.setPixelColor(RGB_LED, COLOR);
+        strip.show();
+    }
+
+    /**
+     * Trun OFF RGB LED.
+     *
+    */
+    //% blockId=TP_Off_single
+    //% block="Set RGB LED Color |%RGB_LED"
+    //% weight=80
+    //% COLOR.min=0
+    export function TP_Off_single(RGB_LED: RGB_LED): void {
+        strip.setBrightness(80);
+        strip.setPixelColor(RGB_LED, 0);
         strip.show();
     }
 
