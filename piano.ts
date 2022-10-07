@@ -104,7 +104,7 @@ namespace Piano {
     * Set RGB Color
     */
     //% weight=85
-    //% blockId="TP_SetRGB" block="red %red|green %green|blue %blue"
+    //% blockId="TP_SetRGB" block="R %red|G %green|B %blue"
     //% red.min=0 red.max=255
     //% green.min=0 green.max=255
     //% blue.min=0 blue.max=255
@@ -132,7 +132,7 @@ namespace Piano {
      * @param COLOR [0-65535] LED1 color; eg: 10000, 65535
     */
     //% blockId=TP_ShowRGB_single
-    //% block="Set RGB LED Color |%RGB_LED|COLOR %10000"
+    //% block="Set |%RGB_LED|COLOR %10000"
     //% weight=80
     //% COLOR.min=0
     export function TP_ShowRGB_single(RGB_LED: RGB_LED, COLOR:number): void {
