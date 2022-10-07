@@ -59,7 +59,10 @@ enum RGB_COLOR {
  */
 //% weight=20 color=#3333FF icon="\uf001"
 namespace Piano {
+
     let strip = neopixel.create(DigitalPin.P1, 4, NeoPixelMode.RGB);
+
+
     //% blockId=tp_press 
     //% block="Key|%index|is pressed"
     //% weight=100
@@ -94,7 +97,7 @@ namespace Piano {
     /**
     * Gets the RGB TPvalue of a known color
     */
-    //% blockId="TP_SetColor" block="Set Color%Color"
+    //% blockId="TP_SetColor" block="Color%Color"
     //% weight=90 blockGap=8
     export function TP_SetColor(Color: RGB_COLOR): number {
         return Color;
