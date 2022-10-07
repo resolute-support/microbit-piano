@@ -97,7 +97,7 @@ namespace Piano {
     /**
     * Gets the RGB TPvalue of a known color
     */
-    //% blockId="TP_SetColor" block="Color%Color"
+    //% blockId="TP_SetColor" block="%Color"
     //% weight=90 blockGap=8
     export function TP_SetColor(Color: RGB_COLOR): number {
         return Color;
