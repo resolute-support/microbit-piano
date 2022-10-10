@@ -235,7 +235,7 @@ namespace Piano {
 
     /**
      * Set volume for buzzer
-     * @param VOLUME [0-255];
+     * @param VOLUME [0-255]
     */
     //% blockId=TP_Volume
     //% block="Set Volume| %VOLUME"
@@ -243,4 +243,5 @@ namespace Piano {
     export function TP_Volume(VOLUME: number): void {
         music.setVolume(VOLUME)
     }
+
 }
