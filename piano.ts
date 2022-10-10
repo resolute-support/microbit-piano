@@ -235,13 +235,25 @@ namespace Piano {
 
     /**
      * Set volume for buzzer
-     * @param VOLUME [0-255]
+     * 
     */
     //% blockId=TP_Volume
     //% block="Set Volume| %VOLUME"
+    //% VOLUME.min=0 VOLUME.max=255
     //% weight=80
     export function TP_Volume(VOLUME: number): void {
         music.setVolume(VOLUME)
+    }
+
+    /**
+     * Turn Buzzer OFF
+     * 
+    */
+    //% blockId=TP_Quiet
+    //% block="stop all sounds"
+    //% weight=80
+    export function TP_Quiet(VOLUME: number): void {
+        music.stopAllSounds()
     }
 
 }
