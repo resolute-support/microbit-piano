@@ -139,7 +139,7 @@ namespace Piano {
     //% weight=80
     //% COLOR.min=0
     export function TP_ShowRGB_single(RGB_LED: RGB_LED, COLOR:number): void {
-        strip.setBrightness(80);
+        strip.setBrightness(100);
         strip.setPixelColor(RGB_LED, COLOR);
         strip.show();
     }
@@ -153,7 +153,7 @@ namespace Piano {
     //% weight=80
     //% COLOR.min=0
     export function TP_Off_single(RGB_LED: RGB_LED): void {
-        strip.setBrightness(80);
+        strip.setBrightness(100);
         strip.setPixelColor(RGB_LED, 0);
         strip.show();
     }
