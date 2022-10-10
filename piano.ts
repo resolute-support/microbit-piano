@@ -252,7 +252,7 @@ namespace Piano {
     //% blockId=TP_Quiet
     //% block="stop all sounds"
     //% weight=80
-    export function TP_Quiet(VOLUME: number): void {
+    export function TP_Quiet(): void {
         music.stopAllSounds()
     }
 
