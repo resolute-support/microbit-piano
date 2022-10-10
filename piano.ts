@@ -232,4 +232,15 @@ namespace Piano {
         if (TPval != 0xffff)
             play = TPval;
     }
+
+    /**
+     * Set volume for buzzer
+     * @param VOLUME [0-255];
+    */
+    //% blockId=TP_Volume
+    //% block="Set Volume| %VOLUME"
+    //% weight=80
+    export function TP_Volume(VOLUME: number): void {
+        music.setVolume(VOLUME)
+    }
 }
