@@ -6,16 +6,16 @@ enum TP_PIANO {
     C = 0x0001,
     bD = 0x0002,
     D = 0x0004,
-    bE = 0x0008,
+    Eb = 0x0008,
 
     E = 0x0010,
     F = 0x0020,
-    bG = 0x0040,
+    Gb = 0x0040,
     G = 0x0080,
 
-    bA = 0x0100,
+    Ab = 0x0100,
     A = 0x0200,
-    bB = 0x0400,
+    Bb = 0x0400,
     B = 0x0800,
 
     C1 = 0x1000,
@@ -195,7 +195,7 @@ namespace Piano {
         } else if (TPval & TP_PIANO.D) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(294);
-        } else if (TPval & TP_PIANO.bE) {
+        } else if (TPval & TP_PIANO.Eb) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(311);
         } else if (TPval & TP_PIANO.E) {
@@ -204,19 +204,19 @@ namespace Piano {
         } else if (TPval & TP_PIANO.F) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(349);
-        } else if (TPval & TP_PIANO.bG) {
+        } else if (TPval & TP_PIANO.Gb) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(370);
         } else if (TPval & TP_PIANO.G) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(392);
-        } else if (TPval & TP_PIANO.bA) {
+        } else if (TPval & TP_PIANO.Ab) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(415);
         } else if (TPval & TP_PIANO.A) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(440);
-        } else if (TPval & TP_PIANO.bB) {
+        } else if (TPval & TP_PIANO.Bb) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(466);
         } else if (TPval & TP_PIANO.B) {
