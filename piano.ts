@@ -4,7 +4,7 @@
 enum TP_PIANO {
     None = 0x0000,
     C = 0x0001,
-    bD = 0x0002,
+    Db = 0x0002,
     D = 0x0004,
     Eb = 0x0008,
 
@@ -59,10 +59,7 @@ enum RGB_COLOR {
  */
 //% weight=20 color=#3333FF icon="\uf001"
 namespace Piano {
-
     let strip = neopixel.create(DigitalPin.P1, 4, NeoPixelMode.RGB);
-
-
     //% blockId=tp_press 
     //% block="Key|%index|is pressed"
     //% weight=100
@@ -189,7 +186,7 @@ namespace Piano {
         } else if (TPval & TP_PIANO.C) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(262);
-        } else if (TPval & TP_PIANO.bD) {
+        } else if (TPval & TP_PIANO.Db) {
             TP_ShowRGB(TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB(), TP_SetRandomRGB());
             music.ringTone(277);
         } else if (TPval & TP_PIANO.D) {
